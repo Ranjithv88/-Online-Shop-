@@ -1,4 +1,4 @@
-package com.App.Login.Log;
+package com.SpringBoot.Online_springBoot_BackEnd.Log;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.After;
@@ -12,57 +12,57 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class LogAspect {
 
-    @After("execution(* com.App.Login.Security.JwtUtils.extractEmail(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.extractEmail(..))")
     public void logExtractEmail () {
         log.info(" ExtractEmail SuccessFully ....! ");
     }
 
-    @After("execution(* com.App.Login.Security.JwtUtils.key(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.key(..))")
     public void logKey () {
         log.info(" Key Generate SuccessFully ....! ");
     }
 
-    @After("execution(* com.App.Login.Security.JwtUtils.extractClaims(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.extractClaims(..))")
     public void logExtractClaims () {
         log.info(" ExtractClaims SuccessFully ....! ");
     }
 
-    @After("execution(* com.App.Login.Security.JwtUtils.extractRole(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.extractRole(..))")
     public void logExtractRole () {
         log.info(" ExtractRole SuccessFully ....! ");
     }
 
-    @After("execution(* com.App.Login.Security.JwtUtils.extractExpiration(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.extractExpiration(..))")
     public void logExtractExpiration () {
         log.info(" ExtractExpiration SuccessFully ....! ");
     }
 
-    @After("execution(* com.App.Login.Security.JwtUtils.validateExpiration(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.validateExpiration(..))")
     public void logValidateExpiration () {
         log.info(" ValidateExpiration SuccessFully ....! ");
     }
 
-    @After("execution(* com.App.Login.Security.JwtUtils.tokenValidation(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.tokenValidation(..))")
     public void logTokenValidation () {
         log.info(" TokenValidation SuccessFully ....! ");
     }
 
-    @Around("execution(*com.App.Login.Security.JwtUtils.*(..))")
+    @Around("execution(*com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils.*(..))")
     public void logJetUtils () {
         log.info(" Enter the JwtUtils Class  ....! ");
     }
 
-    @Before("execution(* com.App.Login.Security.doFilterInternal(..))")
+    @Before("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.doFilterInternal(..))")
     public void logDoFilterInternal () {
         log.info(" Enter the Security Filter ....! ");
     }
 
-    @Before("execution(* com.App.Login.Security.securityFilterChain(..))")
+    @Before("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.securityFilterChain(..))")
     public void logInSecurityFilterChain () {
         log.info(" Entry The SecurityConfiguration .......! ");
     }
 
-    @After("execution(* com.App.Login.Security.securityFilterChain(..))")
+    @After("execution(* com.SpringBoot.Online_springBoot_BackEnd.Security.securityFilterChain(..))")
     public void logOutSecurityFilterChain () {
         log.info(" Exit The SecurityConfiguration .......! ");
     }

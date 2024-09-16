@@ -1,4 +1,4 @@
-package com.App.Login.Exception;
+package com.SpringBoot.Online_springBoot_BackEnd.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

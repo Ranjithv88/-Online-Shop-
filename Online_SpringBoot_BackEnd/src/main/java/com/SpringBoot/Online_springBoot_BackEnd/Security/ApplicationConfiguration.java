@@ -1,6 +1,6 @@
-package com.App.Login.Security;
+package com.SpringBoot.Online_springBoot_BackEnd.Security;
 
-import com.App.Login.Repository.UserRepository;
+import com.SpringBoot.Online_springBoot_BackEnd.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

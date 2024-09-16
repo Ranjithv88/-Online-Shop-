@@ -8,11 +8,11 @@
 		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.App</groupId>
-	<artifactId>Login</artifactId>
+	<groupId>com.SpringBoot</groupId>
+	<artifactId>Online_springBoot_BackEnd</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Login</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Online_springBoot_BackEnd</name>
+	<description> This is the Online Shop Project In Back-End </description>
 	<url/>
 	<licenses>
 		<license/>
@@ -119,3 +119,4 @@
 	</build>
 
 </project>
+

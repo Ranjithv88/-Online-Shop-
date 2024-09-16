@@ -1,10 +1,10 @@
-package com.App.Login.Service;
+package com.SpringBoot.Online_springBoot_BackEnd.Service;
 
-import com.App.Login.Model.Enum.Role;
-import com.App.Login.Model.Login;
-import com.App.Login.Model.User;
-import com.App.Login.Repository.UserRepository;
-import com.App.Login.Security.JwtUtils;
+import com.SpringBoot.Online_springBoot_BackEnd.Model.Enum.Role;
+import com.SpringBoot.Online_springBoot_BackEnd.Model.Login;
+import com.SpringBoot.Online_springBoot_BackEnd.Model.User;
+import com.SpringBoot.Online_springBoot_BackEnd.Repository.UserRepository;
+import com.SpringBoot.Online_springBoot_BackEnd.Security.JwtUtils;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -52,6 +52,18 @@ public class AuthenticationService implements UserDetailsService {
         }else{
             return ResponseEntity.noContent().build();
         }
+    }
+
+    public String update(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole(Role.USER);
+        userRepository.save(user);
+        return " User Update Successfully .....! ";
+    }
+
+    public String delete (long id) {
+        userRepository.deleteById(id);
+        return " User Delete Successfully .....! ";
     }
 
     @Override

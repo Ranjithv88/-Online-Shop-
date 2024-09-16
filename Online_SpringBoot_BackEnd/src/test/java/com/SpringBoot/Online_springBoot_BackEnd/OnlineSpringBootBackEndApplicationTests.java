@@ -1,10 +1,10 @@
-package com.App.Login;
+package com.SpringBoot.Online_springBoot_BackEnd;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LoginApplicationTests {
+class OnlineSpringBootBackEndApplicationTests {
 
 	@Test
 	void contextLoads() {

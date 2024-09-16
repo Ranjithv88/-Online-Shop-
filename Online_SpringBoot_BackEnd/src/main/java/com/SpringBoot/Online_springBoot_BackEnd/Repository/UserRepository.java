@@ -1,6 +1,6 @@
-package com.App.Login.Repository;
+package com.SpringBoot.Online_springBoot_BackEnd.Repository;
 
-import com.App.Login.Model.User;
+import com.SpringBoot.Online_springBoot_BackEnd.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;

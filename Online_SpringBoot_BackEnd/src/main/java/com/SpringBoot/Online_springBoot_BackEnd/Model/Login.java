@@ -1,4 +1,4 @@
-package com.App.Login.Model;
+package com.SpringBoot.Online_springBoot_BackEnd.Model;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

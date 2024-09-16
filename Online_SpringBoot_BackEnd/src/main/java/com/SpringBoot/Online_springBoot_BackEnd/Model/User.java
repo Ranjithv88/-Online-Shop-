@@ -1,6 +1,6 @@
-package com.App.Login.Model;
+package com.SpringBoot.Online_springBoot_BackEnd.Model;
 
-import com.App.Login.Model.Enum.Role;
+import com.SpringBoot.Online_springBoot_BackEnd.Model.Enum.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

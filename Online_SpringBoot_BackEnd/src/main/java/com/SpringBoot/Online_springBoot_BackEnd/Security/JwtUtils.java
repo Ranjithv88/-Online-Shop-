@@ -1,6 +1,6 @@
-package com.App.Login.Security;
+package com.SpringBoot.Online_springBoot_BackEnd.Security;
 
-import com.App.Login.Model.User;
+import com.SpringBoot.Online_springBoot_BackEnd.Model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

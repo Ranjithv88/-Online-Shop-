@@ -1,6 +1,6 @@
-package com.App.Login.Security;
+package com.SpringBoot.Online_springBoot_BackEnd.Security;
 
-import com.App.Login.Exception.AuthEntryPoint;
+import com.SpringBoot.Online_springBoot_BackEnd.Exception.AuthEntryPoint;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +24,7 @@ public class SecurityConfiguration {
     private AuthEntryPoint authenticationEntryPoint;
     private AuthenticationProvider authenticationProvider;
 
-    private final String[] guest = {"/public/**"};
+    private final String[] guest = {"/login","/register"};
     private final String[] user = {"/user/**"};
     private final String[] admin = {"/admin/**"};
 
