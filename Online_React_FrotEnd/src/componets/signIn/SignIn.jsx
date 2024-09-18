@@ -1,5 +1,5 @@
-import React from 'react'
 import './SignIn.scss';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   return (
@@ -16,7 +16,7 @@ function SignIn() {
         </div>
         <div className='LThree'>
           <button type='submit' > Sign In </button>
-          <h1> Don't Have Account ? <a href="#"> Click Here </a> </h1>
+          <h1> Dont Have Account ? <Link to="/register"><a href=""> Click Here </a> </Link> </h1>
         </div>
       </form>
     </div>

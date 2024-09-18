@@ -1,0 +1,17 @@
+
+/*------------- All Elements -------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    a {
+        text-decoration: none;
+        color: rgb( 0, 0, 0);
+    }
+    
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
+

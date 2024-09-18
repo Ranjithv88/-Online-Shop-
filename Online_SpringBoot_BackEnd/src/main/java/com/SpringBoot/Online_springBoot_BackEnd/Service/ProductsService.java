@@ -10,7 +10,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductsService {
 
-    private ProductsRepository repository;
+    private final ProductsRepository repository;
 
     public List<Products> productsList() {
         return repository.findAll();

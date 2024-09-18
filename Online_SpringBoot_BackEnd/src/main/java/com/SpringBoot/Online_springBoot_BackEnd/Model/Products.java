@@ -32,6 +32,8 @@ public class Products {
 
     @NotBlank(message = " Description is Mandatory ......! ")
     @Size(min = 100,message = " Description Minimum Required 100 Words ......! ")
+    @Lob
+    @Column(length = 62000)
     private String description;
 
 }

@@ -29,6 +29,10 @@ public class User implements UserDetails {
     @Size(min = 2,message = " UserName Must Be Between 2 & 30 Characters .......! ",max = 40)
     private String userName;
 
+    @NotBlank(message = " Age is Mandatory ......! ")
+    @Size(min = 1, max = 2 ,message = " Age is Invalid .......! ")
+    private int age;
+
     @NotBlank(message = " Email is Mandatory ......! ")
     @Email(message = " Email is Invalid .......! ")
     private String email;
@@ -36,6 +40,10 @@ public class User implements UserDetails {
     @NotBlank(message = " Password is Mandatory ......! ")
     @Size(min = 8,message = " Too Weak .......! ")
     private String password;
+
+    @NotNull(message = " PhoneNumber is is Mandatory ............! ")
+    @Size(min = 10 ,max = 10 ,message = " PhoneNumber is Invalid .............!")
+    private long PhoneNumber;
 
     @Enumerated(EnumType.STRING)
     private Role role;

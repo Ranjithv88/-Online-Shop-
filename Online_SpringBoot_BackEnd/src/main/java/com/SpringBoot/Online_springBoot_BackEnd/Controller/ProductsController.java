@@ -27,7 +27,7 @@ public class ProductsController {
         return ResponseEntity.ok().body(service.productsRegister(product));
     }
 
-    @PutMapping("/product//update")
+    @PutMapping("/product/update")
     public ResponseEntity<String> put (@Valid  @RequestBody Products products,@PathVariable long id) {
         products.setId(id);
         return ResponseEntity.ok().body(service.productsUpdate(products));
