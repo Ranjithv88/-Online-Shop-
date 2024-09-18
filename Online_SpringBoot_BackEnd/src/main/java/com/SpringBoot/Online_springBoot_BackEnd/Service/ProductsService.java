@@ -16,8 +16,8 @@ public class ProductsService {
         return repository.findAll();
     }
 
-    public String productsRegister(Products products) {
-        repository.save(products);
+    public String productsRegister(Products product) {
+        repository.save(product);
         return " Product Register Successfully .....! ";
     }
 

@@ -23,8 +23,8 @@ public class ProductsController {
     }
 
     @PostMapping("/product/register")
-    public ResponseEntity<String> post (@Valid @RequestBody Products products) {
-        return ResponseEntity.ok().body(service.productsRegister(products));
+    public ResponseEntity<String> post (@Valid @RequestBody Products product) {
+        return ResponseEntity.ok().body(service.productsRegister(product));
     }
 
     @PutMapping("/product//update")

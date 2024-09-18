@@ -7,7 +7,7 @@ function SignIn() {
     <div className='LoginOuter'>
       <form className='LoginInner'>
         <div className='LOne'>
-          <h1> Sign in </h1>
+          <h1> Online Shop </h1>
           <h5> Use Your Google Account </h5>
         </div>
         <div className='LTwo'>

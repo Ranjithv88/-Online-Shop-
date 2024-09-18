@@ -1,6 +1,6 @@
 
-/*------------- Google Fonts (Passion One) -------------*/
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+/*------------- Google Fonts ( Poppins ) -------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*------------- All Elements -------------*/
 * {
@@ -9,8 +9,9 @@
     box-sizing: border-box;
     a {
         text-decoration: none;
+        color: rgb( 0, 0, 0);
     }
-    font-family: "Passion One",sans-serif;
+    font-family: "Poppins",sans-serif;
 }
 
 /*------------- Login Page Css Element -------------*/
@@ -31,15 +32,15 @@
         box-shadow: 2px 2px 5px rgb(0, 0, 0);
         .LOne {
             h1 {
-                font-size: 4vh;
+                font-size: 6vh;
                 text-align: center;
                 font-weight: bold;
-                padding: 20px 20px;
+                padding: 10px 10px;
             }
             h5 {
                 text-align: center;
                 font-weight: 500;
-                font-size: 2vh;
+                font-size: 3vh;
             }
         }
         .LTwo {
@@ -52,10 +53,11 @@
                 width: 30vw;
                 border: none;
                 border-radius: 25px;
-                box-shadow: 2px 2px 12px rgb(0, 0, 0);
+                background-color: rgb(243, 243, 243);
                 padding: 5px 10px;
-                font-size: 2vh;
+                font-size: 2.5vh;
                 letter-spacing: 1px;
+                font-weight: 800;
             }
             input:focus {
                 outline: none;
@@ -67,35 +69,25 @@
             flex-direction: column;
             justify-content: space-evenly;
             button {
-                font-family: "Passion One",serif;
                 font-weight: 400;
                 border: none;
                 font-size: 3vh;
                 letter-spacing: 1px;
-                padding: 20px 20px;
+                padding: 5px 20px;
                 color: rgb(255, 255, 255);
-                background-color: rgba(1, 1, 194, 0.692);
-                width: 28vw;
+                background-color: rgb(26, 115, 232);
+                width: 20vw;
                 border-radius: 10px;
                 cursor: pointer;
             }
+            button:hover{
+                background-color: rgb(20, 89, 180);
+            }
             h1 {
-                @keyframes cli{
-                    form{
-                        scale: 0;
-                    } 
-                    to {
-                        scale: 1;
-                    }
-                }
-                a::before:hover {
-                    content: "";
-                    padding: 20px 80px;
-                    border: 2px solid black;
-                    border-radius: 50%;
-                    position: absolute;
-                    left: 740px;
-                    animation: cli 4s ease-in-out 1s;
+                font-size: 2vh;
+                a:hover {
+                    text-decoration: underline solid rgb(20, 89, 180);
+                    color: rgb(20, 89, 180);
                 }
             }
         }
