@@ -1,6 +1,25 @@
 
-/*------------- Google Fonts ( Bungee,Poppins ) -------------*/
-
+/*------------- Google Fonts ( Inter,Oswald,Pacifico,Merriweather ) -------------*/
+@font-face {
+    font-family: Inter;
+    src: url('../../assets/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf');
+}
+@font-face {
+    font-family: Oswald;
+    src: url('../../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Pacifico;
+    src: url('../../assets/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: Merriweather;
+    src: url('../../assets/fonts/Merriweather/Merriweather-Regular.ttf');
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
 
 /*------------- Register Page Css Element -------------*/
 .Register {
@@ -9,23 +28,117 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/images/register\ background\ image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     main{
-        height: 80vh;
-        width: 60vw;
+        height: 85vh;
+        width: 50vw;
         display: flex;
+        background-color: rgb(255, 255, 255);
+        border-radius: 22px;
         .RegisterBanner {
-        width: 30vw;
-        background-image: url('../../assets/images/Register\ banner\ background\ image.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: rgb(255, 255, 255);
-        display: grid;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 10px 10px;
+            width: 20vw;
+            background-image: url('../../assets/images/Register\ banner\ background\ image.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);
+            display: grid;
+            align-items: center;
+            padding: 10px 10px;
+            border-radius: 20px;
+            overflow: hidden;
+            h1 {
+                font-size: 4vh;
+                font-family: "Pacifico", cursive;
+            }
+            p {
+                font-size: 2.5vh;
+                font-family: "Oswald", sans-serif;
+            }
         }
         form {
             width: 30vw;
+            display: grid;
+            padding: 10px 40px;
+            row-gap: 10px;
+            display: grid;
+            align-self: center;
+            text-align: center;
+            justify-content: center;
+            h1 {
+                font-family: "Bebas Neue", sans-serif;
+            }
+            div {
+                background-color: rgb(233, 233, 233);
+                border-radius: 50px;
+                width: 25vw;
+                height: 7vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                i {
+                    font-size: 4vh;
+                }
+                input{
+                    border: none;
+                    background-color: rgb(233, 233, 233);
+                    font-size: 2.5vh;
+                    width: 20vw;
+                    font-family: "Inter", sans-serif;
+                }
+                input:focus {
+                    outline: none;
+                }
+                button {
+                    background-color: transparent;
+                    color: rgb(0, 0, 0);
+                    width: auto;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: transparent;
+                    
+                }
+            }
+            .password {
+                width: 17vw;
+            }
+            button {
+                border: none;
+                border-radius: 20px;
+                background-color: rgba(0, 122, 187, 0.8);
+                width: 24vw;
+                height: 7vh;
+                font-size: 4vh;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                font-family: "Oswald", sans-serif;
+                cursor: pointer;
+                i{
+                    font-size: 5vh;
+                }
+            }
+            button:hover {
+                background-color: rgba(0, 122, 187, 1);
+            }
+            span {
+                font-family: "Merriweather", serif;
+            }
+            h2 {
+                font-family: "Merriweather", serif;
+                font-size: 2.8vh;
+                a {
+                    color: rgb(23, 115, 234);
+                }
+                a:hover{
+                    text-decoration: underline solid 2px rgb(23, 115, 234);
+                }
+            }
+            p {
+                font-family: "Oswald", sans-serif;
+                font-size: 2vh;
+            }
         }
     }
 }

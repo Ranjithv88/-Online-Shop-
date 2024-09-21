@@ -18,7 +18,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Optional;
@@ -33,7 +32,8 @@ public class AuthenticationService implements UserDetailsService {
 
     public String register(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(Role.USER);
+        if (user.getRole() == null)
+            user.setRole(Role.USER);
         userRepository.save(user);
         return " Register Successfully .....! ";
     }
