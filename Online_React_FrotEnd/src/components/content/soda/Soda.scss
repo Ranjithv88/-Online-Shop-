@@ -1,0 +1,146 @@
+
+/*------------- Fonts ( Karantina,Matemasie ) -------------*/
+@font-face {
+    font-family: Matemasie;
+    src: url('../../../assets/fonts/Matemasie/Matemasie-Regular.ttf');
+}
+@font-face {
+    font-family: Karantina;
+    src: url('../../../assets/fonts/Karantina/Karantina-Regular.ttf');
+}
+
+/*------------- Soda Components Css Element -------------*/
+.content01 {
+    height: 80vh;
+    width: 98vw;
+    z-index: 1;
+    padding: 1vh;
+    span {
+        font-size: 6vh;
+        background-color: rgb(156, 42, 50);
+        color: white;
+        padding: 10px;
+        padding-bottom: 3px;
+        border-radius: 25px 25px 0px 0px;
+        font-family: "Karantina", system-ui;
+    }
+    .SodaBox {
+        height: 80vh;
+        width: 97.8vw;
+        border: 4px solid rgb(156, 42, 50);
+        border-radius: 0px 20px 20px 20px;
+        background-color: rgb(205, 205, 205);
+        background-image:
+        repeating-linear-gradient(
+            to right, transparent 0 150px, #0001 150px 151px
+        ), 
+        repeating-linear-gradient(
+            to bottom, transparent 0 150px, #0001 150px 151px
+        ),
+        linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
+        url('../../../assets/images/soda\ Background\ image.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        header {
+            width: min(1200px, 90vw);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+            height: 0px;
+            flex-wrap: wrap;
+            div {
+                display: grid;
+                justify-content: space-between;
+                align-items: center;
+                row-gap: 10px;
+                padding-bottom: 10px;
+                h1 {
+                    font-family: "Matemasie",sans-serif;
+                    font-size: 10vh;
+                }
+                p {
+                    width: 28vw;
+                    font-size: 2.5vh;
+                    text-align: justify;
+                    font-family: "Karantina", system-ui;
+                }
+            }
+            img {
+                width: 250px;
+                height: 80px;
+            }
+        }
+        .banner {
+            scale: (0.68);
+            height: 88vh;
+            position: relative;
+            .product {
+                cursor: pointer;
+                height: 500px;
+                width: 500px;
+                position: absolute;
+                bottom: 170px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+                transition: 0.7s;
+                --left: 0px;
+                display: flex;
+                .soda {
+                    background: 
+                        var(--url) var(--left) 0,
+                        url('../../../assets/images/soda\ mockup.png');
+                    background-size: auto 100%;
+                    width: 288px;
+                    aspect-ratio: 2 / 4;
+                    background-blend-mode: multiply;
+                    mask-image: url('../../../assets/images/soda\ mockup.png');
+                    mask-size: auto 100%;
+                    transition: 0.7s;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .product:hover {
+                --left: 1180px;
+                transform: translateX(-50%) translateY(-50px);
+            }
+            .rock {
+                position: absolute;
+                inset: 0 0 0 0;
+                pointer-events: none;
+                img {
+                    position: absolute;
+                    transition: 0.7s;
+                }
+            }
+        }
+        .banner .rock img:nth-child(1) {
+            height: 170px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+        }
+        .banner:has(.product:hover) .rock img:nth-child(1) {
+            transform: translateX(-50%) translateY(50px);
+        }
+        .banner .product .soda:nth-child(2) {
+            opacity: 0;
+        }
+        .banner .product:hover .soda:nth-child(2) {
+            opacity: 1;
+        }
+    }
+}
+.content01:hover {
+    span {
+        background-color: rgb(253, 214, 0);
+    }
+    .SodaBox {
+        border: 4px solid rgb(253, 214, 0);
+    }
+}
+

@@ -72,6 +72,7 @@ function Register(){
     alert(response.data)
   }
   return(
+     /*------------- Register Page Html Element -------------*/
     <div className="Register">
       <main>
         <div className='RegisterBanner'>
@@ -97,7 +98,7 @@ function Register(){
           </div>
           <button type='submit'>Send <i><SiMinutemailer /></i></button>
           <span>OR</span>
-          <h2>I Have the Account ? <Link to={"/"} ><a href="#">Click Here</a></Link></h2>
+          <h2>I Have the Account ? <Link to={"/Log"} ><a href="#">Click Here</a></Link></h2>
           <p>By continuing, you agree to Online Shop Terms of Service an acknowledge you've read our Privacy Policy.Notice at collection.</p>
         </form>
       </main>

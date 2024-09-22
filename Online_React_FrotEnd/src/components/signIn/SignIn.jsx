@@ -2,12 +2,11 @@ import './SignIn.scss'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { FcGoogle } from "react-icons/fc"
-import { FaFacebook } from "react-icons/fa6"
-import { FaTwitter } from "react-icons/fa6"
+import { FaFacebook,FaTwitter,FaArrowRightLong } from "react-icons/fa6"
 import { useState } from 'react'
 
 function SignIn(){
-  const[Success,SetSuccess]=useState(false)
+  const[Success,SetSuccess]=useState(true)
   const[page,SetPage]=useState('Unknown')
   async function submit(e){
     e.preventDefault()
@@ -45,7 +44,7 @@ function SignIn(){
           <button className='SignG'><h3><FcGoogle /></h3>Continue With Google </button>
           <button className='SignF'><h3><FaFacebook /></h3>Continue With FaceBook </button>
           <button className='SignT'><h3><FaTwitter /></h3>Continue With Twitter </button>
-          <span>Don't have the Account ? <Link to={"/Reg"}><a href='#'>Click Here</a></Link></span>
+          <span>Don't have the Account ? <Link to='/Reg'><a href='#'>Click Here</a></Link></span>
           <p>By continuing, you agree to Online Shop Terms of Service an acknowledge you've read our Privacy Policy. Notice at collection.</p>
         </form>
       </div> 
@@ -57,7 +56,7 @@ function SignIn(){
           <h2>{page}</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit omnis ipsa officiis eveniet voluptatem sapiente illo in totam aliquid, deserunt quo neque ad, doloremque deleniti consectetur suscipit porro ducimus nobis.</p>
           <div>
-          <Link to='Home'><button type='button'>Explore</button></Link>
+          <Link to='/Home'><button type='button'><span>Explore </span><FaArrowRightLong className='arrow'/></button></Link>
           </div>
         </div>
       </div>

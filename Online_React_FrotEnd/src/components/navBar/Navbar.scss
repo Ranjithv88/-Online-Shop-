@@ -1,0 +1,201 @@
+
+/*------------- Fonts ( Bebas Neue,Matemasie ) -------------*/
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+@font-face {
+    font-family: Matemasie;
+    src: url('../../assets/fonts/Matemasie/Matemasie-Regular.ttf');
+}
+
+/*------------- Navbar Page Css Element -------------*/
+.NavBox {
+    .Navbar {
+        height: 15vh;
+        width: 99vw;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 10px 5px;
+        position: fixed;
+        background-color: rgb(237, 240, 242);
+        box-shadow: inset -5px -5px 12px #ffffff,
+                5px 5px 12px rgba(0,0,0,.16);
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        z-index: 2;
+        .N01 {
+            display: flex;
+            cursor: pointer;
+            flex-grow: 2;
+            h1 {
+                font-size: 5vh;
+                font-weight: bolder;
+                padding: 5px 10px;
+                font-family: "Matemasie", sans-serif;
+            }
+        }
+        .N02 {
+            display: flex;
+            flex-grow: 2;
+            font-family: "Matemasie", sans-serif;
+            letter-spacing: 1px;
+            ul {
+                display: inherit;
+                flex-direction: row;
+                li {
+                    padding: 5px 15px;
+                    font-size: 3.5vh;
+                    font-weight: bold;
+                }
+            }
+        }
+        .N03 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px 10px;
+            flex-grow: 1;
+            .searchButton {
+                padding: 0px 10px;
+                button {
+                    font-size: 5vh;
+                    border: none;
+                    height: 7vh;
+                    width: 7vh;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background-color: rgb(236, 240, 243);
+                    box-shadow: -5px -5px 12px #ffffff,
+                            5px 5px 12px rgba(0,0,0,.16);
+                }
+            }
+            /*------------- User Css Element -------------*/
+            .profile {
+                cursor: pointer;
+                padding: 0px 10px;
+                img {
+                    height: 8vh;
+                    width: 8vh;
+                    border-radius: 50%;
+                    padding: 2px;
+                    border: 2px solid rgb(0, 0, 0);
+                }
+                h4 {
+                    font-size: 3vh;
+                    font-family: "Matemasie", sans-serif;
+                }
+            }
+            .cart {
+                font-size: 4vh;
+                display: inherit;
+                cursor: pointer;
+                width: 5vw;
+                justify-content: space-between;
+                background-color: rgb(236, 240, 243);
+                border-radius: 20px;
+                box-shadow: -5px -5px 12px #ffffff,
+                        5px 5px 12px rgba(0,0,0,.16);
+                h4 {
+                    padding: 0px 10px;
+                    border-radius: 50%;
+                }
+            }
+            /*------------- Unknown Css Element -------------*/
+            .unknown {
+                button {
+                    border: none;
+                    color: white;
+                    background-color: rgb(253, 214, 0);
+                    padding: 10px;
+                    font-size: 2.8vh;
+                    font-family: "Matemasie", sans-serif;
+                    cursor: pointer;
+                }
+                .RegisterBtn{
+                    border-radius: 50px 0px 0px 50px;
+                }
+                .LogInBtn {
+                    border-radius: 0px 50px 50px 0px;
+                }
+                button:hover {
+                    padding: 12px;
+                    font-size: 3vh;
+                    background-color: rgb(230, 197, 11);
+                }
+            }
+        }
+    }
+
+    /*------------- Search Css Element -------------*/
+    .search {
+        height: 60vh;
+        width: 98.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        row-gap: 10px;
+        font-family: "Bebas Neue",sans-serif;
+        .searchHeading {
+            background-image: url('../../assets/images/search\ banner\ .jpeg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            border-radius: 4px;  
+            padding: 10px;    
+            h1 {
+                backdrop-filter: blur(30px);
+                font-size: 10vh;
+                color: black;
+                padding: 2px 10px;
+                border-radius: 8px;
+            }
+        }
+        .inputBar {
+            height: 7.5vh;
+            width: 48vw;
+            border-radius: 50px;
+            background-color: rgb(236, 240, 243);
+            box-shadow: inset -5px -5px 12px rgb(255, 255, 255),
+                    inset 5px 5px 12px rgba(0,0,0,.16);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .searchBarIcon {
+                font-size: 4vh;
+            }
+            input {
+                border: none;
+                padding-right: 10px;
+                background-color: transparent;
+                font-family: "Bebas Neue",sans-serif;
+                font-weight: 600;
+                letter-spacing: 1px;
+                width: 40vw;
+                font-size: 3vh;
+                font-weight: 400;
+            }
+            input:focus {
+                outline: none;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+                font-size: 4vh;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.Empty {
+    height: 20vh;
+    background-color: transparent;
+}
+

@@ -1,5 +1,5 @@
 
-/*------------- Google Fonts ( Poppins,Griffy ) -------------*/
+/*------------- Google Fonts ( Poppins,Griffy,Anton ) -------------*/
 @font-face {
     font-family: Poppins;
     src: url('../../assets/fonts/Poppins/Poppins-Black.ttf');
@@ -7,6 +7,10 @@
 @font-face {
     font-family: Griffy;
     src: url('../../assets/fonts/Griffy/Griffy-Regular.ttf');
+}
+@font-face {
+    font-family: Anton;
+    src: url('../../assets/fonts/Anton/Anton-Regular.ttf');
 }
 
 /*------------- Login Page Css Element -------------*/
@@ -116,16 +120,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/images/Success\ Background\ Image\ .jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     .success {
-        background-color: whitesmoke;
-        height: 50vh;
+        background-color: rgb(245, 245, 245);
+        height: 54vh;
         width: 60vw;
         display: grid;
         text-align: center;
         padding: 20px 20px;
+        border-radius: 5px;
+        font-family: "Griffy",system-ui;
         h1 {
+            background-image: url('../../assets/images/Success\ Text\ Background\ Image\ .jpeg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+            font-family: "Anton",sans-serif;
             font-size: 10vh;
             font-weight: bolder;
+            border-radius: 20px;
         }
         h2 {
             font-size: 6vh;
@@ -136,19 +153,31 @@
             font-weight: 500;
             padding: 20px;
         }
-        button {
-            font-size: 4vh;
-            font-weight: bold;
-            border: none;
-            padding: 10px 10px;
-            border-radius: 20px 20px 20px 20px / 20px 0px 20px 0px;
-            background-color: rgb(255, 215, 0);
-            color: rgb(255, 255, 255);
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: rgb(4, 153, 219);
-            font-size: 4.5vh;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                font-family: "Poppins",sans-serif;
+                font-size: 3.5vh;
+                font-weight: bold;
+                border: none;
+                margin: 25px 10px;
+                padding: 10px;
+                border-radius: 20px 20px 20px 20px / 20px 0px 20px 0px;
+                background-color: rgb(4, 153, 219);
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                span {
+                    padding: 0px 10px;
+                }
+            }
+            button:hover {
+                background-color: rgb(255, 215, 0);
+                font-size: 4vh;
+            }
         }
     }
 }
