@@ -5,16 +5,7 @@ import Register from './components/register/Register'
 import Navbar from './components/navBar/Navbar'
 import Soda from './components/content/soda/Soda'
 import Footer from './components/footer/Footer'
-
-export function Home() {
-  return(
-    <>
-      <Navbar />
-      <Soda />
-      <Footer />
-    </>
-  )
-}
+import Home from './components/Home'
 
 function App() {
   return (
