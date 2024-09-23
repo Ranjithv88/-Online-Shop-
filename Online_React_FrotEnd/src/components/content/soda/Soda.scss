@@ -23,6 +23,7 @@
         padding-bottom: 3px;
         border-radius: 25px 25px 0px 0px;
         font-family: "Karantina", system-ui;
+        cursor: default;
     }
     .SodaBox {
         height: 80vh;
@@ -32,65 +33,53 @@
         background-color: rgb(205, 205, 205);
         background-image:
         repeating-linear-gradient(
-            to right, transparent 0 150px, #0001 150px 151px
-        ), 
+            to right, transparent 0 150px, rgba(0, 0, 0, 0.067) 150px 151px), 
         repeating-linear-gradient(
-            to bottom, transparent 0 150px, #0001 150px 151px
-        ),
-        linear-gradient(to right, #CDCDCDcc, #CDCDCDcc),
+            to bottom, transparent 0 150px, rgba(0, 0, 0, 0.067) 150px 151px),
+        linear-gradient(to right, rgba(205, 205, 205, 0.8), rgba(205, 205, 205, 0.8)),
         url('../../../assets/images/soda\ Background\ image.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        header {
-            width: min(1200px, 90vw);
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            padding-top: 50px;
-            height: 0px;
-            flex-wrap: wrap;
-            div {
-                display: grid;
-                justify-content: space-between;
-                align-items: center;
-                row-gap: 10px;
-                padding-bottom: 10px;
-                h1 {
-                    font-family: "Matemasie",sans-serif;
-                    font-size: 10vh;
-                }
-                p {
-                    width: 28vw;
-                    font-size: 2.5vh;
-                    text-align: justify;
-                    font-family: "Karantina", system-ui;
-                }
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .details {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            row-gap: 10px;
+            padding: 20px;
+            h1 {
+                font-family: "Matemasie",sans-serif;
+                font-size: 10vh;
+            }
+            p {
+                width: 28vw;
+                font-size: 2.5vh;
+                text-align: justify;
+                font-family: "Karantina", system-ui;
             }
             img {
-                width: 250px;
-                height: 80px;
+                width: 22vw;
+                aspect-ratio: 4/1;
             }
         }
         .banner {
-            scale: (0.68);
-            height: 88vh;
-            position: relative;
+            display: grid;
+            justify-items: center;
+            align-items: end;
+            height: 80vh;
+            row-gap: 10px;
             .product {
-                cursor: pointer;
-                height: 500px;
-                width: 500px;
-                position: absolute;
-                bottom: 170px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1;
-                transition: 0.7s;
                 --left: 0px;
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.7s;
                 .soda {
-                    background: 
-                        var(--url) var(--left) 0,
+                    cursor: pointer;
+                    background: var(--url) var(--left) 0,
                         url('../../../assets/images/soda\ mockup.png');
                     background-size: auto 100%;
                     width: 288px;
@@ -100,38 +89,31 @@
                     mask-size: auto 100%;
                     transition: 0.7s;
                     position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    transform: scale(0.68);
+                    z-index: 2;
+                }
+                .soda:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+            .product:hover .soda:nth-child(2) {
+                opacity: 1;
+            }
+            .rock {
+                img {
+                    transition: 0.7s;
+                    width: 28vw;
+                    height: 20vh;
+                    z-index: 1;
                 }
             }
             .product:hover {
                 --left: 1180px;
-                transform: translateX(-50%) translateY(-50px);
+                transform: translateY(-28px);
             }
-            .rock {
-                position: absolute;
-                inset: 0 0 0 0;
-                pointer-events: none;
-                img {
-                    position: absolute;
-                    transition: 0.7s;
-                }
-            }
-        }
-        .banner .rock img:nth-child(1) {
-            height: 170px;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -30px;
         }
         .banner:has(.product:hover) .rock img:nth-child(1) {
-            transform: translateX(-50%) translateY(50px);
-        }
-        .banner .product .soda:nth-child(2) {
-            opacity: 0;
-        }
-        .banner .product:hover .soda:nth-child(2) {
-            opacity: 1;
+            transform: translateY(20px);
         }
     }
 }

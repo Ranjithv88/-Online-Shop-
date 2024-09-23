@@ -10,28 +10,24 @@ function Soda() {
   return (
     <div className='content01'>
         <span>New Product</span>
-        <div className='SodaBox'>
-        <header>
-              <div>
-                  <h1>Buying</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis sint provident culpa, doloremque rerum pariatur dolore ipsam placeat ducimus sapiente, recusandae atque earum blanditiis ullam dolores vitae numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis sint provident culpa, doloremque rerum pariatur dolore ipsam placeat ducimus sapiente, recusandae atque earum blanditiis ullam dolores vitae numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis sint provident culpa, doloremque rerum pariatur dolore ipsam placeat ducimus sapiente, recusandae atque earum blanditiis ullam dolores vitae numquam.</p>
-              </div>
-              <img src={barCode} alt="" />
-        </header>
           <Link to='/Home/Soda'>
-            <div class="banner">
-              <div class="product">
-                  <div class="soda" style={{'--url': `url(${Cover01})`}}>
-                  </div>
-                  <div class="soda" style={{'--url': `url(${Cover02})`}}>
-                  </div>
+            <div className='SodaBox'>
+              <div className='details'>
+                <h1>Buying</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis sint provident culpa, doloremque rerum pariatur dolore ipsam placeat ducimus sapiente, recusandae atque earum blanditiis ullam dolores vitae numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis sint provident culpa, doloremque rerum pariatur dolore ipsam placeat ducimus sapiente, recusandae atque earum blanditiis ullam dolores vitae numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni reiciendis sint provident culpa, doloremque rerum pariatur dolore ipsam placeat ducimus sapiente, recusandae atque earum blanditiis ullam dolores vitae numquam.</p>
+                <img src={barCode} alt="" />
               </div>
-              <div class="rock">
+              <div className="banner">
+                <div className="product">
+                  <div class="soda" style={{'--url': `url(${Cover01})`}}></div>
+                  <div class="soda" style={{'--url': `url(${Cover02})`}}></div>
+                </div>
+                <div className="rock">
                   <img src={Img} alt="" />
+                </div>
               </div>
             </div>
-          </Link>
-        </div>
+        </Link>
     </div>
   )
 }
