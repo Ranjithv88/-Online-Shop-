@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.scss'
 import {Link} from 'react-router-dom'
 import { IoSearchOutline } from "react-icons/io5"
@@ -8,6 +8,11 @@ import { FaMicrophone } from "react-icons/fa6";
 function Navbar() {
   const [search,setSearch]=useState(false)
   const [log,setLog]=useState(false)
+  useEffect(()=>{    
+    let token=localStorage.getItem('token')
+    // const decode=jwt.decode(token)
+    // console.log(decode)
+  },[])
   return (
     <div className='NavBox'>
       {/*------------- Navbar Html Element -------------*/}

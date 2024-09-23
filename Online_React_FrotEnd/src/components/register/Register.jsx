@@ -1,6 +1,6 @@
 import './Register.scss'
 import {React,useState,useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import {MdEmail,MdPassword} from "react-icons/md"
 import {IoPhonePortraitOutline,IoEyeOff} from "react-icons/io5"
@@ -16,12 +16,13 @@ function Register(){
   const[email,SetEmail]=useState(true)
   const[password,SetPassword]=useState(true)
   const[phoneNumber,SetPhoneNumber]=useState(true)
+  const navigate=useNavigate()
   useEffect(()=>{passwordEye},[])
   function passwordEye(){
       setPass((a)=>(a ==='password'?'text':'password'))
       setShowEye((b)=>!b)
   }
-  function validation(e){
+  async function validation(e){
     e.preventDefault()
     let userName=e.target[0].value
     let age=e.target[1].value
@@ -63,13 +64,20 @@ function Register(){
       return
     }else{
       console.log(' Validation Successfully .....!');
-      Reg_post(obj)
+      if(await Reg_post(obj)){
+        navigate('/Log')
+      }
+      else{
+        console.log(' Something wrong ......! ')
+        alert(' Please Try Again .......! ')
+      }
     }
   }
   async function Reg_post(obj){
     let response=await axios.post('http://localhost:8888/register',obj)
     console.log(response)
     alert(response.data)
+      return (response.status === 200)
   }
   return(
      /*------------- Register Page Html Element -------------*/
