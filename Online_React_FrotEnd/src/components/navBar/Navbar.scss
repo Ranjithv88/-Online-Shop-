@@ -50,6 +50,9 @@
                     font-size: 3.5vh;
                     font-weight: bold;
                 }
+                li:hover {
+                    font-size: 4vh;
+                }
             }
         }
         .N03 {
@@ -70,6 +73,10 @@
                     background-color: rgb(236, 240, 243);
                     box-shadow: -5px -5px 12px #ffffff,
                             5px 5px 12px rgba(0,0,0,.16);
+                }
+                button:hover {
+                    background-color: rgb(253, 214, 0);
+                    color: rgb(255, 255, 255);
                 }
             }
             /*------------- User Css Element -------------*/
