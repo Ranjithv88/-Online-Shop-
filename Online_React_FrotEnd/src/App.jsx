@@ -3,9 +3,8 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import SignIn from './components/signIn/SignIn'
 import Register from './components/register/Register'
 import Navbar from './components/navBar/Navbar'
-import Soda from './components/content/soda/Soda'
 import Footer from './components/footer/Footer'
-import Home from './components/Home'
+import Home from './components/websites/Home'
 
 function App() {
   return (
@@ -14,7 +13,8 @@ function App() {
         <Route path="/Log" element={<SignIn />}/>
         <Route path="/Reg" element={<Register />}/>
         <Route path="/Home" element={<Home />}/>
-        <Route path="/Home/Soda" element={<><Navbar /><Soda /><Footer /></>}/>
+        <Route path="/Home/Soda" element={<><Navbar /><Footer /></>}/>
+        <Route path="/Home/Chair" element={<><Navbar /><Footer /></>}/>
       </Routes>
     </BrowserRouter>
   )

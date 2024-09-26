@@ -77,7 +77,7 @@ function Register(){
     let response=await axios.post('http://localhost:8888/register',obj)
     console.log(response)
     alert(response.data)
-      return (response.status === 200)
+      return response.status === 200
   }
   return(
      /*------------- Register Page Html Element -------------*/

@@ -1,0 +1,86 @@
+
+/*------------- Fonts ( Karantina,Matemasie ) -------------*/
+@font-face {
+    font-family: Matemasie;
+    src: url('../../../assets/fonts/Matemasie/Matemasie-Regular.ttf');
+}
+@font-face {
+    font-family: Karantina;
+    src: url('../../../assets/fonts/Karantina/Karantina-Regular.ttf');
+}
+
+/*------------- Chair Components Css Element -------------*/
+.content02 {
+    height: 80vh;
+    width: 98vw;
+    z-index: 1;
+    padding: 1vh;
+    transition: 1s;
+    span {
+        font-size: 6vh;
+        background-color: rgb(156, 42, 50);
+        color: white;
+        padding: 10px;
+        padding-bottom: 3px;
+        border-radius: 25px 25px 0px 0px;
+        font-family: "Karantina", system-ui;
+        cursor: default;
+    }
+    .ChairBox {
+        cursor: pointer;
+        height: 80vh;
+        width: 97.8vw;
+        border: 4px solid rgb(156, 42, 50);
+        border-radius: 0px 20px 20px 20px;
+        background-color: rgb(205, 205, 205);
+        background:
+        repeating-linear-gradient(
+            to right, transparent 0 150px, rgba(0, 0, 0, 0.067) 150px 151px), 
+        repeating-linear-gradient(
+            to bottom, transparent 0 150px, rgba(0, 0, 0, 0.067) 150px 151px),
+        linear-gradient(to right, rgba(102, 102, 102, 0.8), rgba(205, 205, 205, 0.8));
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .chairFea {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .chair {
+                background-image: var(--url);
+                background-size: auto 100%;
+                height: 80vh;
+                width: 8%;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: 1s;
+            }
+        }
+        .ChairDetails {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            row-gap: 10px;
+            padding: 20px;
+            h1 {
+                font-family: "Matemasie",sans-serif;
+                font-size: 10vh;
+            }
+            p {
+                width: 28vw;
+                font-size: 2.5vh;
+                text-align: justify;
+                font-family: "Karantina", system-ui;
+            }
+        }
+    }
+}
+.content02:hover {
+    span {
+        background-color: rgb(253, 214, 0);
+    }
+    .ChairBox {
+        border: 4px solid rgb(253, 214, 0);
+    }
+
+}

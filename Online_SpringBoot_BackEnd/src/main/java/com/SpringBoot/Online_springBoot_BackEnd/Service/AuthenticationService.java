@@ -35,7 +35,7 @@ public class AuthenticationService implements UserDetailsService {
         if (user.getRole() == null)
             user.setRole(Role.USER);
         userRepository.save(user);
-        return " Register Successfully .....! ";
+        return " Register successFully ......! ";
     }
 
     public ResponseEntity<?> login (Login login){
