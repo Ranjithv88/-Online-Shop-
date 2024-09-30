@@ -1,0 +1,56 @@
+
+/*------------- Fonts ( Bebas Neue,Matemasie ) -------------*/
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+@font-face {
+    font-family: Matemasie;
+    src: url('../../assets/fonts/Matemasie/Matemasie-Regular.ttf');
+}
+
+/*------------- 404 Not Found Page Css Element -------------*/
+.NotFound {
+    transition: 1s;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 1vh;
+    background-color: rgb(242, 242, 242);
+    height: 100vh;
+    font-family: "Matemasie", sans-serif;
+    img {
+        height: 55vh;
+        width: 85vh;
+    }
+    h1 {
+        font-size: 8vh;
+        font-weight: bolder;
+    }
+    button {
+        font-size: 4vh;
+        border: none;
+        padding: 1vh 1.5vh;
+        border-radius: 20px;
+        font-weight: bold;
+        font-family: "Matemasie", sans-serif;
+        background-color: rgb(196, 44, 54);
+        color: rgb(242, 242, 242);
+        cursor: pointer;
+        border: 0.5vh solid transparent;
+        letter-spacing: 0.28vh;
+    }
+    button:hover {
+        border: 0.5vh solid rgb(196, 44, 54);
+        color: rgb(0, 0, 0);
+        background-color: transparent;
+    }
+    p {
+        font-size: 2.5vh;
+        width: 90vh;
+        font-weight: 500;
+        font-family: "Bebas Neue",sans-serif;
+    }
+}
+

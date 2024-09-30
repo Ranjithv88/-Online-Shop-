@@ -9,7 +9,7 @@ import barCode from '../../../assets/images/barCode.png'
 function Soda() {
   return (
     <div className='content01'>
-        <span>New Product</span>
+        <span>Soda Can</span>
           <Link to='/Home/Soda'>
             <div className='SodaBox'>
               <div className='details'>

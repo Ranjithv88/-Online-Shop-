@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins="http://localhost:5173",methods = {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins="http://localhost:5173/",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.OPTIONS})
 @RestController
 @RequiredArgsConstructor
 public class AuthenticationController {
@@ -18,9 +18,13 @@ public class AuthenticationController {
     private final AuthenticationService service;
     private final AuthenticationFilter filter;
 
+    @GetMapping("/user")
+    public String test(){
+        return "test...";
+    }
     @PostMapping("/register")
-    public ResponseEntity<?> register (@Valid @RequestBody User user) {
-        return ResponseEntity.ok().body(service.register(user));
+    public ResponseEntity<String> register (@Valid @RequestBody User user) {
+        return service.register(user);
     }
 
     @PostMapping("/login")

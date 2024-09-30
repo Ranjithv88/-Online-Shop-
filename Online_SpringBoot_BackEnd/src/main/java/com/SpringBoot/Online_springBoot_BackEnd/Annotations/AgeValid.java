@@ -7,7 +7,8 @@ public class AgeValid implements ConstraintValidator<Decimal, Integer> {
 
     @Override
     public boolean isValid(Integer age, ConstraintValidatorContext constraintValidatorContext) {
-        return age == null || (age > 1 && age < 2) ;
+
+        return age != null & Integer.toString(age).length()==2 ;
     }
 
 }

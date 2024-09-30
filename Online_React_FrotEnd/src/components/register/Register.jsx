@@ -26,6 +26,7 @@ function Register(){
     e.preventDefault()
     let userName=e.target[0].value
     let age=e.target[1].value
+    
     let email=e.target[2].value
     let password=e.target[3].value
     let phoneNumber=e.target[5].value
@@ -36,7 +37,6 @@ function Register(){
       "password":e.target[3].value,
       "phoneNumber":e.target[5].value
     }
-    console.log(obj)
     if(userName.length<=1){
       console.log('UserName is too Short')
       SetUserName(false)
@@ -74,10 +74,12 @@ function Register(){
     }
   }
   async function Reg_post(obj){
-    let response=await axios.post('http://localhost:8888/register',obj)
+
+
+    let response=await axios.post('http://localhost:8888/register',{...obj, age:parseInt(obj["age"])})
     console.log(response)
     alert(response.data)
-      return response.status === 200
+      return response.status === 201
   }
   return(
      /*------------- Register Page Html Element -------------*/

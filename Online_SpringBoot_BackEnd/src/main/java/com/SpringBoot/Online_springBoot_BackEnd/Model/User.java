@@ -3,6 +3,7 @@ package com.SpringBoot.Online_springBoot_BackEnd.Model;
 import java.util.Collection;
 import java.util.List;
 
+import com.SpringBoot.Online_springBoot_BackEnd.Annotations.Decimal;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -42,9 +43,10 @@ public class User implements UserDetails {
     @Size(min = 2,message = " UserName Must Be Between 2 & 30 Characters .......! ",max = 40)
     private String userName;
 
-    @NotNull(message = " Age is Mandatory ......! ")
-    @Size(min = 1,max = 2,message = " Age is Invalid ......! ")
-    private String age;
+//    @NotNull(message = " Age is Mandatory ......! ")
+//    @Size(min = 1,max = 2,message = " Age is Invalid ......! ")
+    @Decimal
+    private int age;
 
     @NotBlank(message = " Email is Mandatory ......! ")
     @Email(message = " Email is Invalid .......! ")

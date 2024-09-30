@@ -1,0 +1,104 @@
+
+/*------------- Fonts ( Bebas Neue,Pacifico,Oswald ) -------------*/
+@font-face {
+    font-family: Pacifico;
+    src: url('../../../assets/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: Oswald;
+    src: url('../../../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../../../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+
+/*------------- ChairSlug Components Css Element ------------*/
+.ChairSlugOuter {
+    transition: 1s;
+    display: grid;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 4vh;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url('../../../assets/images/chair/chairSlug\ background\ image.jpg');
+    background-position: top top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1{
+        font-size: 10vh;
+        grid-column: span 2;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+    }
+    .ChairSlugFirst {
+        img {
+            height: 80vh;
+            width: 80vh;
+            filter: drop-shadow(0px 80px 30px rgba(0, 0, 0, 0.467));
+        }
+    }
+    .ChairSlugSecond {
+        display: inherit;
+        row-gap: 2vh;
+        font-family: "Bebas Neue", sans-serif;
+        h5 {
+            font-size: 6.5vh;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 5vh;
+            font-weight: bold;
+        }
+        h3 {
+            letter-spacing: 1px;
+        }
+        .quantity {
+            span {
+                font-size: 5vh;
+                padding: 2vh;
+                font-weight: 500;
+                text-align: center;
+            }
+            button {
+                padding: 2vh;
+                height: 10vh;
+                width: 10vh;
+                border: none;
+                background-color: rgb(236, 240, 243);
+                font-size: 5vh;
+                cursor: pointer;
+                text-align: center;
+                border-radius: 50%;
+                margin: 2vh;
+            }
+        }
+        button {
+            padding: 2vh;
+            height: 8vh;
+            width: 25vh;
+            border: none;
+            background-color: rgb(236, 240, 243);
+            font-size: 3.5vh;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 20px;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: bold;
+            box-shadow: inset -5px -5px 12px rgb(255, 255, 255),
+                5px 5px 12px rgba(0,0,0, 0.16);
+        }
+        .chairSlugCart:hover {
+            color: rgb(11, 128, 11);
+        }
+        p {
+            font-size: 3vh;
+            font-style: italic;
+            font-family: "Pacifico", cursive;
+            text-align: justify;
+        }
+    }
+}
+

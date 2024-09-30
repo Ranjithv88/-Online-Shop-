@@ -1,0 +1,97 @@
+
+/*------------- Fonts ( Bebas Neue,Pacifico,Oswald ) -------------*/
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../../../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+}
+@font-face {
+    font-family: Pacifico;
+    src: url('../../../assets/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: Oswald;
+    src: url('../../../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+/*------------- ChairList Components Css Element -------------*/
+.chairProductList {
+    transition: 1s;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    .ChairBanner {
+        border-radius: 50px;
+        border: 4px solid rgb(236, 240, 243);
+        box-shadow: inset -5px -5px 12px rgba( 0, 0, 0, 0.16);
+        height: 48vh;
+        width: 90vw;
+        background-image: url('../../../assets/images/chair/chair\ banner\ background\ image.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding: 4vh;
+        display: grid;
+        justify-content: end;
+        overflow: hidden;
+        h1 {
+            font-size: 5vh;
+            width: 50vw;
+            font-family: "Pacifico", cursive;
+        }
+        p {
+            font-size: 2.5vh;
+            width: 50vw;
+            font-family: "Pacifico", cursive;
+            text-align: justify;
+        }
+    }
+    .ChairBanner:hover {
+        border: 4px solid rgb(156, 42, 50);
+        cursor: pointer;
+    }
+    .chairProduct {
+        display: grid;
+        grid-template-columns: repeat( auto-fill,  minmax(280px, 1fr));
+        overflow: hidden;
+        padding: 4vh;
+        gap: 5vh;
+        margin: 3vh;
+        .chairProductItem {
+            cursor: pointer;
+            background-color: rgb(236, 240, 243);
+            box-shadow: inset -5px -5px 12px rgb(255, 255, 255),
+                5px 5px 12px rgba(0,0,0, 0.16);
+            overflow: hidden;
+            padding: 20px;
+            display: grid;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            row-gap: 8px;
+            border: 4px solid transparent;
+            img {
+                height: 40vh;
+                width: 38vh;
+                filter: drop-shadow(0px 80px 30px rgba(0, 0, 0, 0.467));
+            }
+            h2 {
+                font-size: 4vh;
+                font-family: "Oswald", sans-serif;
+            }
+            h4 {
+                font-size: 3vh;
+                font-family: "Pacifico", cursive;
+            }
+            p {
+                text-align: justify;
+                font-family: "Bebas Neue", sans-serif;
+            }
+        }
+        .chairProductItem:hover {
+            border: 4px solid rgb(156, 42, 50);
+            border-radius: 20px;
+        }
+    }
+}
+
